@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    --gradiente-barra: linear-gradient(90deg, rgba(19, 19, 31, 1) 7%, rgba(53, 51, 205, 1) 40%, rgba(160, 32, 240, 1) 100%);
+    --gradiente-botao: linear-gradient(90deg, rgba(53, 51, 205, 1) 20%, rgba(160, 32, 240, 1) 100%);
+    --cor-fundo: #13131F;
+    --cor-fonte: #fff;
+    --azul: #3533cd;
+    --roxo: #a020f0;
+}
+
+/* Estilizando o layout */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+}
+
+/* Estilizando a barra de navegação */
+#navegacao {
+    list-style: none;
+    padding: 0;
+    background: var(--cor-fundo);
+    background: var(--gradiente-barra);
+    text-align: right;
+}
+
+#navegacao li {
+    display: inline;
+}
+
+#navegacao:first-child {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#navegacao li img {
+    width: 50px;
+    float: left;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#navegacao li a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+/*  transition: 0.5s ease-in-out; : serve para editar a transição de um estado para o outro */
+/* position:; é usado para controlar o posicionamento de um elemento em relação ao seu contexto de posicionamento, que pode ser o documento HTML como um todo, um elemento pai ou algum outro elemento.  */
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: var(--cor-fonte);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main{
+    float: left;
+    width: 30%;
+}
+
+h1{
+    display:block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilizando as imagens */
+#resultados {
+    float: right;
+    width: 70%;
+    text-align: center;
+}
+
+#resultados h2{
+    margin-top: 20px ;
+}
+
+#resultados p{
+    margin-top: 10px;
+}
+
+.projeto {
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.equipos {
+    width: 355px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.apresentacao{
+    width: 245px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Estilizando a parte principal da página */
+.box {
+    margin-left: 20px;
+    padding: 15px;
+    margin-top: 20px;
+    background: rgba(19, 19, 31, 0.2);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.box h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box p{
+    text-align: justify;
+}
+
+/* Estilizando o rodapé da página */
+footer {
+    width: 100%;
+    background: var(--gradiente-barra);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
