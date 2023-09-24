@@ -4,40 +4,72 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habilidades e Competências</title>
-    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../IMG/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../CSS/habiCompe.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="../index.html" target="_blank">Menu</a>|
-            <a href="objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a>|
-            <a href="projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a>|
-            <a href="habiCompe.html" target="_blank">Habilidades e Competências</a>|
-            <a href="contato.html" target="_blank">Contatos</a>
+            <ul id="navegacao">
+                <li>
+                    <img src="../IMG/icon.png" alt="logo">
+                </li>
+
+                <li>
+                    <a href="../index.html" target="_blank">Menu</a>
+                </li>
+                <li>
+                    <a href="objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a>
+                </li>
+                <li>
+                    <a href="projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a>
+                </li>
+                <li>
+                    <a href="habiCompe.html" target="_blank">Habilidades e Competências</a>
+                </li>
+                <li>
+                    <a href="contato.html" target="_blank">Contatos</a>
+                </li>
+            </ul>
         </nav>
     </header>
 
     <h1> Habilidades e Competências</h1>
 
-    <h2>Soft Skills</h2>
-    <ol>
-        <li>Proatividade;</li>
-        <li>Adaptabilidade;</li>
-        <li>Pensamento criativo;</li>
-        <li>Comunicação;</li>
-        <li>Organizazção.</li>
-    </ol>
+    <section id="soft">
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Proatividade;</li>
+            <li>Adaptabilidade;</li>
+            <li>Pensamento criativo;</li>
+            <li>Comunicação;</li>
+            <li>Organizazção.</li>
+        </ul>
+    </section>
 
-    <h2>Hard Skills</h2>
-    <ol>
-        <li>HTML5;</li>
-        <li>CSS;</li>
-        <li>Git e GitHub;</li>
-        <li>JavaScript;</li>
-        <li>React.</li>
-    </ol>
+    <section id="hard">
+        <h2>Hard Skills</h2>
+        <ul class="animacao">
+            <li class="card">
+                <img src="../IMG/html5.svg" alt="Imagem HTML5">HTML5
+            </li>
+            <li class="card">
+                <img src="../IMG/css3.svg" alt="Imagem CSS3"> CSS
+            </li>
+            <li class="card">
+                <img src="../IMG/git.svg" alt="Iamgem Git">Git
+            </li>
+            <li class="card">
+                <img src="../IMG/javascript.svg" alt="Imagem JavaScrip">JavaScript
+            </li>
+            <li class="card">
+                <img src="../IMG/react.svg" alt="Imagem React">React
+            </li>
+        </ul>
+    </section>
 
     <footer><small>Copyright &copy; Todos os direitos reservados.</small></footer>
 </body>

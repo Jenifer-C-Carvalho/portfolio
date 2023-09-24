@@ -4,27 +4,42 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="/CSS/menu.css">
+    <link rel="shortcut icon" href="IMG/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/menu.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html" target="_blank">Menu</a>|
-            <a href="HTML/objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a>|
-            <a href="HTML/projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a>|
-            <a href="HTML/habiCompe.html" target="_blank">Habilidades e Competências</a>|
-            <a href="HTML/contato.html" target="_blank">Contatos</a>
+            <ul id="navegacao">
+                <li>
+                    <img src="IMG/icon.png" alt="logo">
+                </li>
+
+                <li><a href="index.html" target="_blank">Menu</a></li>
+
+                <li><a href="HTML/objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a></li>
+
+                <li><a href="HTML/projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a></li>
+
+                <li><a href="HTML/habiCompe.html" target="_blank">Habilidades e Competências</a></li>
+
+                <li><a href="HTML/contato.html" target="_blank">Contatos</a></li>
+            </ul>
         </nav>
     </header>
 
-    <h1>Olá, me chamo Jenifer Costa Carvalho </h1>
+    <h1 id="tituloPrincipal">Olá, me chamo Jenifer Costa Carvalho </h1>
+
+    <figure>
+        <img src="IMG/fotoPessoal.jpg" alt="foto perfil">
+    </figure>
 
     <main>
         <article>
-            <h2>Sobre mim:</h2>
+            <h2>Sobre mim</h2>
             <p>Tenho 18 anos e conclui o ensino médio em 2022. Atualmente, estou cursando Programação Web no Instituto
                 da Oportunidade Social (IOS), no qual estou desenvolvendo minhas habilidades em HTML5, Git, GitHub, CSS,
                 JavaSCript e React.
@@ -32,10 +47,16 @@
         </article>
     </main>
 
-    <h2>Confira o meu currículo:</h2>
-    <a href="ASSETS/Currículo.Jenifer.Costa.Carvalho.zip" download="currículo_Jenifer_Costa_Carvalho">Currículo.</a>
+    <div class="curriculo">
+        <h2>Confira o meu currículo:</h2>
+        <button id="download"><a href="ASSETS/Currículo.Jenifer.Costa.Carvalho.zip" download="currículo_Jenifer_Costa_Carvalho"
+                >Currículo</a></button>
+    </div>
 
-    <footer><small>Copyright &copy; Todos os direitos reservados.</small></footer>
+    <footer>
+        <small>Copyright &copy; Todos os direitos reservados.</small>
+    </footer>
+
 </body>
 
 </html>
