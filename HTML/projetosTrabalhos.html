@@ -11,69 +11,74 @@
 </head>
 
 <body>
+    <!-- Barra de navegação -->
     <header>
-        <nav>
-            <ul id="navegacao">
-                <li>
-                    <img src="../IMG/icon.png" alt="logo">
-                </li>
-                <li>
-                    <a href="../index.html" target="_blank">Menu</a>
-                </li>
-                <li>
-                    <a href="objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a>
-                </li>
-                <li>
-                    <a href="projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a>
-                </li>
-                <li>
-                    <a href="habiCompe.html" target="_blank">Habilidades e Competências</a>
-                </li>
-                <li>
-                    <a href="contato.html" target="_blank">Contatos</a>
-                </li>
+        <nav id="navegacao">
+            <div class="logo">
+                <img src="../IMG/icon.png" alt="logo">
+            </div>
+            <ul class="links">
+                <li><a href="../index.html" target="_blank">Menu</a></li>
+
+                <li><a href="objetivosPropositos.html" target="_blank">Objetivos e Propósitos</a></li>
+
+                <li><a href="projetosTrabalhos.html" target="_blank">Projetos e Trabalhos</a></li>
+
+                <li><a href="habiCompe.html" target="_blank">Habilidades e Competências</a></li>
+
+                <li><a href="contato.html" target="_blank">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Conteúdo principal da página -->
     <main>
-        <h1>Projetos e Trabalhos</h1>
+        <div class="principal">
+            <h1>Projetos e Trabalhos</h1>
 
-        <article class="box"> 
-            <h2> Projeto:</h2>
-            <p>No ano de 2022, tive a oportunidade de participar de um projeto científico chamado Labo Expert
-                (Laboratório Experimental Tecnológico), no qual apresentei na Feira de ciências da 1ª Amostra DIC em
-                Agosto de 2022.</p>
-        </article>
+            <article class="box">
+                <h2> Projeto:</h2>
+                <p>No ano de 2022, tive a oportunidade de participar de um projeto científico chamado Labo Expert
+                    (Laboratório Experimental Tecnológico), no qual apresentei na Feira de ciências da 1ª Amostra DIC em
+                    Agosto de 2022.</p>
+            </article>
 
-    <section class="box">
-        <h2>Desafio do meu projeto:</h2>
-        <p>Um dos desafios do meu projeto era como tornar equipamentos laboratoriais que eram caros e de difícil
-            disponibilidade, acessíveis e sustentáveis. </p>
-    </section>
+            <section class="box">
+                <h2>Desafio do meu projeto:</h2>
+                <p>Um dos desafios do meu projeto era como tornar equipamentos laboratoriais que eram caros e de difícil
+                    disponibilidade, acessíveis e sustentáveis. </p>
+            </section>
 
-    <section class="box">
-        <h2>Solução e a Proposta:</h2>
-        <p>Nossa solução foi criar então os equipos com materiais reutilizáveis, ou seja, algo que seria jogado fora,
-            foi reaproveitado ajudando o meio ambiente. Nossa principal propósta era mostrar que era possível criar
-            equipamentos laboratoriais recicláveis com a mesma funcionalidade que um praticamente novo. </p>
-    </section>
+            <section class="box">
+                <h2>Solução e a Proposta:</h2>
+                <p>Nossa solução foi criar então os equipos com materiais reutilizáveis, ou seja, algo que seria jogado
+                    fora,
+                    foi reaproveitado ajudando o meio ambiente. Nossa principal propósta era mostrar que era possível
+                    criar
+                    equipamentos laboratoriais recicláveis com a mesma funcionalidade que um praticamente novo. </p>
+            </section>
+        </div>
+
+        <!-- Seção dos resultados do projeto -->
+        <section id="resultados">
+            <h2>Resultados:</h2>
+            <div class="imagens">
+                <img src="../IMG/projeto02.png" alt="monatgem dos equipamentos" class="projeto">
+
+                <img src="../IMG/equipos.jpg" alt="equipamentos no estágio de conclusão" class="equipos">
+            </div>
+
+            <p> Clique na imagem e assista o vídeo da minha apresentação: </p>
+            <a href="https://www.youtube.com/watch?v=S9d1kVs8GZE" target="_blank">
+                <img src="../IMG/apresentacaoDic.png" alt="Feira de Ciências da 1ª Amostra DIC" class="apresentacao">
+            </a>
+        </section>
     </main>
 
-    <section id="resultados">
-        <h2>Resultados:</h2>
-
-        <img src="../IMG/projeto02.png" alt="monatgem dos equipamentos" class="projeto">
-
-        <img src="../IMG/equipos.jpg" alt="equipamentos no estágio de conclusão" class="equipos">
-
-        <p> Clique na imagem e assista o vídeo da minha apresentação: </p>
-        <a href="https://www.youtube.com/watch?v=S9d1kVs8GZE" target="_blank">
-            <img src="../IMG/apresentacaoDic.png" alt="Feira de Ciências da 1ª Amostra DIC" class="apresentacao">
-        </a>
-    </section>
-
-    <footer><small>Copyright &copy; Todos os direitos reservados.</small></footer>
+    <!-- Estilizando o footer da página -->
+    <footer>
+        <div class="footer"> <small>&copy;Copyright. Todos os direitos reservados.</small> </div>
+    </footer>
 </body>
 
 </html>

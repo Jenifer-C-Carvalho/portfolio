@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Saira&display=swap');
+
 /* Regras do CSS */
 * {
     margin: 0;
@@ -5,6 +8,7 @@
     box-sizing: border-box;
 }
 
+/* Variáveis */
 :root {
     --gradiente-barra: linear-gradient(90deg, rgba(19, 19, 31, 1) 7%, rgba(53, 51, 205, 1) 40%, rgba(160, 32, 240, 1) 100%);
     --gradiente-botao: linear-gradient(90deg, rgba(53, 51, 205, 1) 20%, rgba(160, 32, 240, 1) 100%);
@@ -12,6 +16,8 @@
     --cor-fonte: #fff;
     --azul: #3533cd;
     --roxo: #a020f0;
+    --fonte-titulo: 'Saira', sans-serif;
+    --fonte-paragrafo: 'Lora', serif;
 }
 
 /* Estilizando o layout */
@@ -20,38 +26,54 @@ body {
     height: 100vh;
     background-color: var(--cor-fundo);
     color: var(--cor-fonte);
+    font-family: var(--fonte-paragrafo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Estilizando a barra de navegação */
-#navegacao {
+
+li {
     list-style: none;
-    padding: 0;
-    background: var(--cor-fundo);
+}
+
+a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    font-family: var(--fonte-titulo);
+}
+
+#navegacao {
+    width: 100vw;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
     background: var(--gradiente-barra);
-    text-align: right;
 }
 
-#navegacao li {
-    display: inline;
-}
-
-#navegacao:first-child {
-    padding-top: 10px;
-    padding-left: 20px;
-}
-
-#navegacao li img {
+.logo img {
     width: 50px;
-    float: left;
-    background-position: center;
     border-radius: 50%;
 }
 
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
 #navegacao li a {
-    color: var(--cor-fonte);
-    text-decoration: none;
-    display: inline-block;
-    padding: 20px;
+    padding: 0 10px 25px 10px;
     font-size: 20px;
     position: relative;
 }
@@ -73,28 +95,27 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Fazendo a estilização da imagem */
-figure {
-    padding-left: 30px;
-    padding-top: 55px;
+/* Estilizando o conteúdo principal da página*/
+main {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-figure img {
-    border-radius: 50%;
-    width: 300px;
-}
 
 h1 {
-    margin-top: 40px;
-    text-align: center;
+    font-family: var(--fonte-titulo);
 }
 
 /* Estilizando as Softs Skills */
 #soft {
-    position: absolute;
-    top: 28%;
-    left: 33%;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
     width: 530px;
     background: rgba(19, 19, 31, 0.2);
     backdrop-filter: blur(0px);
@@ -105,7 +126,7 @@ h1 {
 
 #soft h2 {
     text-align: center;
-    padding-bottom: 35px;
+    font-family: var(--fonte-titulo);
 }
 
 #soft li {
@@ -114,28 +135,40 @@ h1 {
 
 /* Estilizando as Hards Skills */
 #hard {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    margin-top: 350px;
 }
 
-#hard ul {
-    margin-top: 25px;
+#hard h2{
+    font-family: var(--fonte-titulo);
 }
 
 /* Fazendo animação das listas */
 .card {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-decoration: none;
-    width: 90px;
-    margin: 0 15px;
+    width: 100px;
     background: rgba(19, 19, 31, 0.2);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.18);
-    padding: 10px;
+    padding: 15px ;
     transition: .35s;
     cursor: pointer;
+}
+
+.animacao{
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .animacao:hover> :not(:hover) {
@@ -145,15 +178,18 @@ h1 {
 
 .card img {
     width: 70px;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 /* Estilizando o rodapé da página */
 footer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer {
     width: 100%;
-    background: var(--gradiente-barra);
-    position: absolute;
-    left: 0;
-    bottom: 0;
     text-align: center;
+    background: var(--gradiente-barra);
+    font-family: var(--fonte-titulo);
 }

@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Saira&display=swap');
+
+/* Regras do CSS */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +16,8 @@
     --cor-fonte: #fff;
     --azul: #3533cd;
     --roxo: #a020f0;
+    --fonte-titulo: 'Saira', sans-serif;
+    --fonte-paragrafo: 'Lora', serif;
 }
 
 /* Estilizando o layout */
@@ -20,38 +26,54 @@ body {
     height: 100vh;
     background-color: var(--cor-fundo);
     color: var(--cor-fonte);
+    font-family: var(--fonte-paragrafo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Estilizando a barra de navegação */
-#navegacao {
+
+li {
     list-style: none;
-    padding: 0;
-    background: var(--cor-fundo);
+}
+
+a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    font-family: var(--fonte-titulo);
+}
+
+#navegacao {
+    width: 100vw;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
     background: var(--gradiente-barra);
-    text-align: right;
 }
 
-#navegacao li {
-    display: inline;
-}
-
-#navegacao:first-child {
-    padding-top: 10px;
-    padding-left: 20px;
-}
-
-#navegacao li img {
+.logo img {
     width: 50px;
-    float: left;
-    background-position: center;
     border-radius: 50%;
 }
 
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
 #navegacao li a {
-    color: var(--cor-fonte);
-    text-decoration: none;
-    display: inline-block;
-    padding: 20px;
+    padding: 0 10px 25px 10px;
     font-size: 20px;
     position: relative;
 }
@@ -73,78 +95,100 @@ nav a:hover::after {
     width: 100%;
 }
 
-main{
-    float: left;
-    width: 30%;
+/* Estilizando o conteúdo principal da página */
+main {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
 }
 
-h1{
-    display:block;
+.principal {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1 {
     text-align: center;
-    margin-top: 20px;
+    font-family: var(--fonte-titulo);
 }
 
-/* Estilizando as imagens */
-#resultados {
-    float: right;
-    width: 70%;
-    text-align: center;
-}
-
-#resultados h2{
-    margin-top: 20px ;
-}
-
-#resultados p{
-    margin-top: 10px;
-}
-
-.projeto {
-    width: 200px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-.equipos {
-    width: 355px;
-    margin-left: 30px;
-    border-radius: 10px;
-}
-
-.apresentacao{
-    width: 245px;
-    margin-top: 10px;
-    border-radius: 10px;
-}
-
-/* Estilizando a parte principal da página */
 .box {
-    margin-left: 20px;
+    width: 80%;
     padding: 15px;
-    margin-top: 20px;
     background: rgba(19, 19, 31, 0.2);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.18);
 }
-.box h2{
+
+.box h2 {
+    margin-bottom: 10px;
     text-align: center;
-    margin-top: 10px;
+    font-family: var(--fonte-titulo);
+}
+
+.box p {
+    text-indent: 25px;
+    text-align: justify;
+}
+
+/* Estilizando as imagens */
+#resultados {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultados h2 {
+    margin-bottom: 10px;
+    font-family: var(--fonte-titulo);
+}
+
+#resultados p {
     margin-bottom: 10px;
 }
 
-.box p{
-    text-align: justify;
+.imagens {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projeto {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.equipos {
+    width: 360px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.apresentacao {
+    width: 245px;
+    border-radius: 10px;
 }
 
 /* Estilizando o rodapé da página */
 footer {
-    width: 100%;
-    background: var(--gradiente-barra);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
+
 }
 
+.footer {
+    width: 100%;
+    text-align: center;
+    background: var(--gradiente-barra);
+    font-family: var(--fonte-titulo);
+
+}
