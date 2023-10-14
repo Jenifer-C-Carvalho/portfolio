@@ -17,7 +17,7 @@
     --azul: #3533cd;
     --roxo: #a020f0;
     --fonte-titulo: 'Saira', sans-serif;
-    --fonte-paragrafo:'Lora', serif;
+    --fonte-paragrafo: 'Lora', serif;
 }
 
 /* Estilizando o layout */
@@ -39,9 +39,10 @@ li {
 }
 
 a {
-    color: var(--cor-fonte);
     text-decoration: none;
     font-size: 20px;
+    color: var(--cor-fonte);
+    outline: none;
 }
 
 header {
@@ -95,6 +96,19 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* Estlizando o toogle */
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    right: 1%;
+}
 /* Estilizando a classe Layout da página*/
 .layout{
     width: 100vw;
@@ -185,6 +199,7 @@ figure img {
     border-radius: 10px;
     transition: all 0.5s;
     cursor: pointer;
+    outline: none;
 }
 
 #download:hover {
@@ -206,3 +221,86 @@ footer {
 }
 
 /* Espaço para o Media Query (responsividade)*/
+
+@media(max-width: 1025px) {
+    
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: .3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+    }
+
+    #check:checked~.links {
+        padding-top: 20px;
+        height: 50vh;
+        
+    }
+
+    .links a {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    nav a:hover::after {
+        display: none;
+    }
+}
+@media(max-width: 900px) {
+    body {
+        height: 200vh;
+    }
+    .layout {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80%;
+    }
+    figure {
+        padding: 0;
+    }
+    .curriculo h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    #tituloPrincipal {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}
+@media(max-width: 450px) {
+    .layout {
+    height: 95%;
+    }
+
+    main article {
+        width: 150%;
+        padding: 25px;
+    }
+}

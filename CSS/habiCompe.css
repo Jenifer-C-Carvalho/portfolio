@@ -24,12 +24,12 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: var(--cor-fundo);
-    color: var(--cor-fonte);
-    font-family: var(--fonte-paragrafo);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--cor-fundo);
+    color: var(--cor-fonte);
+    font-family: var(--fonte-paragrafo);
 }
 
 /* Estilizando a barra de navegação */
@@ -39,9 +39,10 @@ li {
 }
 
 a {
-    color: var(--cor-fonte);
     text-decoration: none;
     font-size: 20px;
+    color: var(--cor-fonte);
+    outline: none;
 }
 
 header {
@@ -93,6 +94,20 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* Estlizando o toogle */
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    right: 1%;
 }
 
 /* Estilizando o conteúdo principal da página*/
@@ -192,4 +207,101 @@ footer {
     text-align: center;
     background: var(--gradiente-barra);
     font-family: var(--fonte-titulo);
+}
+
+/* Responsividade */
+
+@media(max-width: 1026px) {
+    body {
+        height: 100vh;
+    }
+
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    #close-icon {
+        display: none;
+    }
+
+    .links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: .3s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+    }
+
+    #check:checked~.links {
+        padding-top: 20px;
+        height: 50vh;
+
+    }
+
+    .links a {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    nav a:hover::after {
+        display: none;
+    }
+
+    .animacao {
+        width: 80%;
+    }
+}
+
+@media(max-width: 436px) {
+    body {
+        height: 200vh;
+    }
+    main {
+        height: 100%;
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    #soft {
+        width: 90%;
+    }
+
+    main h1 {
+        font-size: 28px;
+    }
+    .animacao {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 380px) {
+    main h1 {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 330px) {
+    main h1 {
+        font-size: 22px;
+    }
 }

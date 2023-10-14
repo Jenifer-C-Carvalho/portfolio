@@ -60,9 +60,6 @@ header {
     justify-content: space-between;
     background-color: var(--cor-fundo);
     background: var(--gradiente-barra);
-    z-index: 999;
-    top: 0;
-    left: 0;
 }
 
 .logo img {
@@ -180,10 +177,15 @@ footer {
 }
 
 /* Responsividade da página com Media Query */
-@media(max-width: 900px) {
+@media(max-width: 1026px) {
+    #contatos {
+        width: 80vw;
+    }
+}
 
-    nav {
-        width: 100%;
+@media(max-width: 900px) {
+    body {
+        height: 200vh;
     }
     .icons {
         display: inline-flex;
@@ -211,14 +213,15 @@ footer {
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
     }
 
-
-
     #check:checked~.links {
-
+        padding-top: 20px;
         height: 50vh;
-        background-color: red;
+        
     }
 
     .links a {
@@ -227,7 +230,44 @@ footer {
         font-size: 10px;
     }
 
-    nav a:hover::after{
+    nav a:hover::after {
         display: none;
+    }
+
+    #contatos{
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 55%;
+    }
+    .card {
+        width: 27%;
+        height: 20%;
+    }
+}
+
+@media(max-width: 450px) {
+    .card {
+        width: 50%;
+        height: 30%;
+    }
+}
+
+@media(max-width: 380px) {
+    .card {
+        width: 55%;
+        height: 30%;
+    }
+}
+
+@media(max-width: 320px) {
+    .card {
+        width: 60%;
+        height: 30%;
+    }
+
+    .conteudo h1 {
+        font-size: 25px;
     }
 }
