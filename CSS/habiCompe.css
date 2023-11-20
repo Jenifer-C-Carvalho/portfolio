@@ -242,7 +242,7 @@ footer {
 
 /* Responsividade */
 
-@media(max-width: 1026px) {
+@media(max-width: 1028px) {
     body {
         height: 100vh;
     }
@@ -281,7 +281,6 @@ footer {
     #check:checked~.links {
         padding-top: 20px;
         height: 50vh;
-
     }
 
     .links a {
@@ -295,17 +294,28 @@ footer {
     }
 
     .animacao {
-        width: 80%;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .cardInfo{
+        height: 50vh;
     }
 }
 
-@media(max-width: 436px) {
-    body {
-        height: 200vh;
+@media (max-width:800px) {
+    .cardInfo{
+        display: none;
     }
+}
+@media(max-width: 436px) {
 
-    main {
-        height: 100%;
+
+    .principal {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 80%;
         justify-content: flex-start;
         gap: 50px;
     }
@@ -314,7 +324,7 @@ footer {
         width: 90%;
     }
 
-    main h1 {
+    .principal h1 {
         font-size: 28px;
     }
 
@@ -325,16 +335,21 @@ footer {
         gap: 30px;
         margin-top: 30px;
     }
+
+    footer {
+        margin-top: 800px;
+    }
+
 }
 
 @media(max-width: 380px) {
-    main h1 {
+    .principal h1 {
         font-size: 26px;
     }
 }
 
 @media(max-width: 330px) {
-    main h1 {
+    .principal h1 {
         font-size: 22px;
     }
 }
