@@ -8,6 +8,7 @@
     <title>Habilidades e Competências</title>
     <link rel="stylesheet" href="../CSS/habiCompe.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="../IMG/icon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -37,47 +38,54 @@
     </header>
 
     <!-- Conteúdo principal da página que fala sobre minhas habilidades e compêtencias -->
-
     <main>
-        <h1> Habilidades e Competências</h1>
+        <div class="principal">
+            <h1> Habilidades e Competências</h1>
 
-        <section id="soft">
-            <h2>Soft Skills</h2>
-            <ul>
-                <li>Proatividade;</li>
-                <li>Adaptabilidade;</li>
-                <li>Pensamento criativo;</li>
-                <li>Comunicação;</li>
-                <li>Organização.</li>
-            </ul>
-        </section>
+            <section id="soft">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Proatividade;</li>
+                    <li>Adaptabilidade;</li>
+                    <li>Pensamento criativo;</li>
+                    <li>Comunicação;</li>
+                    <li>Organização.</li>
+                </ul>
+            </section>
 
-        <section id="hard">
-            <h2>Hard Skills</h2>
-            <ul class="animacao">
-                <li class="card">
-                    <img src="../IMG/html5.svg" alt="Imagem HTML5">HTML5
-                </li>
-                <li class="card">
-                    <img src="../IMG/css3.svg" alt="Imagem CSS3"> CSS
-                </li>
-                <li class="card">
-                    <img src="../IMG/git.svg" alt="Iamgem Git">Git
-                </li>
-                <li class="card">
-                    <img src="../IMG/javascript.svg" alt="Imagem JavaScrip">JavaScript
-                </li>
-                <li class="card">
-                    <img src="../IMG/react.svg" alt="Imagem React">React
-                </li>
-            </ul>
-        </section>
+            <section id="hard">
+                <h2>Hard Skills</h2>
+                <ul class="animacao" onmouseout="some()">
+                    <li class="card" id="HTML" onmouseover="infoHTML()" >
+                        <img src="../IMG/html5.svg" alt="Imagem HTML5">HTML5
+                    </li>
+                    <li class="card" id="CSS" onmouseover="infoCSS()">
+                        <img src="../IMG/css3.svg" alt="Imagem CSS3"> CSS
+                    </li>
+                    <li class="card" id="GIT" onmouseover="infoGIT()">
+                        <img src="../IMG/git.svg" alt="Iamgem Git">Git
+                    </li>
+                    <li class="card" id="JS" onmouseover="infoJS()">
+                        <img src="../IMG/javascript.svg" alt="Imagem JavaScrip">JavaScript
+                    </li>
+                    <li class="card" id="REACT" onmouseover="infoREACT()">
+                        <img src="../IMG/react.svg" alt="Imagem React">React
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Estruturando informações dos cards -->
+        <aside class="cardInfo"></aside>
     </main>
 
     <!-- Estilizando o footer da página -->
     <footer>
         <div class="footer"> <small>&copy;Copyright. Todos os direitos reservados.</small> </div>
     </footer>
+
+    <!-- linkando javascript -->
+    <script src="../JS/script.js"></script>
 </body>
 
 </html>
